@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+   
+  </head>
+  <body charset="UTF-8" accept-charset="utf-8">
+    <!--
+  <form charset="utf-8" accept-charset="utf-8">
+
+
+    <div class="editor-container" accept-charset="utf-8">
+      <textarea id="editor1"></textarea>
+      <div id="editor" accept-charset="utf-8">// Program to reverse a string</div>
+    </div>
+</form>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.5.3/ace.js" type="text/javascript" charset="utf-8"></script>
+
+    <script>let editoro = document.querySelector("#editor");
+let editor=ace.edit(editoro);
+editor.setTheme("ace/theme/cobalt");
+editor.session.setMode("ace/mode/java");
+editor.setOptions({
+       enableBasicAutocompletion: true,
+        enableSnippets: true,
+        enableLiveAutocompletion: true,
+        
+});
+
+
+let editoro1 = document.getElementById("editor1");
+let editor1=ace.edit(editoro1);
+editor1.setTheme("ace/theme/cobalt");
+editor1.session.setMode("ace/mode/java");
+editor1.setOptions({
+       enableBasicAutocompletion: true,
+        enableSnippets: true,
+        enableLiveAutocompletion: true,
+        
+});
+
+</script>
+  </body>
+</html>
+<style>
+  *{margin:0;padding:0;}
+.editor-container {
+  width: 900px;
+  height: 540px;
+  margin: 1px auto;
+  position: relative;
+}
+
+#editor {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  font-size: 20px;
+}
+#editor1 {
+  position: absolute;
+  left: 100%;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  font-size: 20px;
+}
+
+
+
+
+</style>-->
+
+<!--
+
+var pastc=-1,pastr=-1 ;
+editor.session.selection.on('changeCursor', function(e) {//console.log(editor.session.getLine(editor.getCursorPosition().row).match(/ा|ी|ि|ु|ू|े|◌ै|ं|ो|ौ|ों|ॉ|ँ|◌ॕ|◌ृ/g).length);
+  if (editor.session.getLine(editor.getCursorPosition().row).match(/ा|ी|ि|ो|ौ|ॉ|ु|ू|े|ै|ं|ँ|ॅ|ा|्/g)!=null){
+var cr=editor.getCursorPosition().row;
+var cc=editor.getCursorPosition().column;
+var psp=0 ,hsp=0 ,nsp=0;//पाज़िटिव स्पेस half space negative space  
+  console.log(editor.getCursorPosition().column);
+  psp=(editor.session.getLine(cr).match(/ु|ू|े|ै|ं|ँ|ॅ|ा|ी|ि|ो|ौ|ॉ/g)==null) ? 0 : editor.session.getLine(cr).match(/ा|ी|ि|ो|ौ|ॉ|ु|ू|े|ै|ं|ँ|ॅ/g).length;
+    console.log("\n psp : "+psp+"\tcr : "+cr) ;
+  hsp=(editor.session.getLine(cr).match(/ा|ी|ि|ो|ौ|ॉ/g)==null) ? 0 :editor.session.getLine(cr).match(/ा|ी|ि|ो|ौ|ॉ/g).length;
+  console.log(" hsp : "+hsp+"\tcc "+cc) ;
+  nsp=(editor.session.getLine(cr).match(/्/g)==null) ? 0 : editor.session.getLine(cr).match(/्/g).length ;
+  console.log(" nsp : "+nsp) ;
+
+if ((pastr!=cr+1)||pastc!=(cc -psp+parseInt(hsp/2)-nsp*2)){
+ console.log("\n goto parseInt(hsp/2) "+parseInt(hsp/2)+" "+(cr+1)+" , "+(cc -psp+parseInt(hsp/2)-nsp*2) ); 
+ editor.gotoLine(cr+1,cc -psp+parseInt(hsp/2)-nsp*2 );
+pastr=cr+1;pastc!=cc -psp+parseInt(hsp/2)-nsp*2;
+}
+}
+
+});
+-->
+
+
+<!--
+
+  //editor.gotoLine(editor.getCursorPosition().row+1,editor.getCursorPosition().column-2);
+/*if ((editor.session.getLine(editor.getCursorPosition().row).match(/ा|ी|ि|ु|ू|े|ै|ं|ो|ौ|ों|◌ॅ|ॉ|ँ|/g)!=null)||(editor.session.getLine(editor.getCursorPosition().row).match(/ा|ी|ि|ो|ौ|ों|ॉ/g)!=null))
+    editor.gotoLine(editor.getCursorPosition().row+1,editor.getCursorPosition().column -editor.session.getLine(editor.getCursorPosition().row).match(/ा|ी|ि|ु|ू|े|ै|ं|ो|ौ|ों|◌ॅ|ॉ|ँ|/g).length+parseInt(editor.session.getLine(editor.getCursorPosition().row).match(/ा|ी|ि|ो|ौ|ों|ॉ/g).length/2)-editor.session.getLine(editor.getCursorPosition().row).match(/्/g).length*2) */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+console.log(editor.session.getLine(editor.getCursorPosition().row).match(/ा|ी|ि|ु|ू|े|ै|ं|ो|ौ|ों|◌ॅ|ॉ|ँ|/g).length+parseInt(editor.session.getLine(editor.getCursorPosition().row).match(/ा|ी|ि|ो|ौ|ों|ॉ/g).length/2)-editor.session.getLine(editor.getCursorPosition().row).match(/्/g).length*2)
+
+
++parseInt(editor.session.getLine(editor.getCursorPosition().row).match(/ा|ी|ि|ो|ौ|ों|ॉ/g).length/2)-editor.session.getLine(editor.getCursorPosition().row).match(/्/g).length*2
+ace.edit(editor, {
+  theme: "ace/theme/cobalt",
+  mode: "ace/mode/java",
+  onChangeCursor: (editor) =>{console.log("zeditor");}
+});
+editor.onChangeCursor((editor) =>{console.log("zeditor")});*/
+/*editor.session.selection.on('changeCursor', function(e) {
+  /*editor.gotoLine(editor.getCursorPosition().row+1,editor.getCursorPosition().column -editor.session.getLine(editor.getCursorPosition().row).match(/ा|ी|ि|ु|ू|े|◌ै|ं|ो|ौ|ों|ॉ|ँ|◌ॕ|◌ृ/g).length+parseInt(editor.session.getLine(editor.getCursorPosition().row).match(/ा|ी|ि|ो|ौ|ों|ॉ/g).length/2)-editor.session.getLine(editor.getCursorPosition().row).match(/्/g).length*2);*/console.log("fhc ");
+//});
+-->
