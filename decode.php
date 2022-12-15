@@ -1,13 +1,13 @@
 <?php 
 $s =file_get_contents('php://input');
-/*$s=$_GET["l"];echo  "fj ";*/
+/*$l=$_GET["l"];echo  "fj ";*/
 $R="";$p="";//resultant and processing string
 $l=$_GET["lang"];
  $star=0;$back=0;$double=0;$single=0;
  $index=0;$rindex=0;//current index and resumed index
 function r($h,$e)//replaces keywords(?:\s+)
 {
-    global $p;$p= preg_replace("/\b(?:".$h.")(\s+|$|\,|\(|\)|{|\}|\.|\[|\])/u",$e.'${1}',$p);
+    global $p;$p= preg_replace("/\b(?:".$h.")(?=\s+|^|\(|\)|\{|\}|\.|\b|\||\[|:|!|;|,|\]|\?)/u",$e,$p);
 }
 function replace($m){
     global $p;$p=$m;//reset p to operate it 
@@ -39,7 +39,40 @@ r("कोशिश","try",$p);
 r("पकड़े","catch",$p);
 r("अंतमे","finally",$p); 
 r("फेके","throw",$p); 
+//LAtest no issue 
+r("इअंक","enum");
+
+
+// Methords replace 
+r("स्कैनर","java.util.Scanner");
+//r("अगलीरेखा","nextLine");after हैअगलीरेखा 
+r("अगलादोहरा","nextBoolean");
+r("अगलाबाइट","nextByte");
+r("अगलाबड़ा","nextDouble");
+r("अगलाफ्लोट","nextFloat");
+r("अगलाअंक","nextInt");
+r("अगलालंबा","nextLong");
+r("अगलाछोटा","nextShort");
+r("मे","in");
+r("मान","values");//Enum methord 
+r("अभी","now");//date टाइम .. 
+r("स्वरूप","format");
+r("रूप","ofPattern");
+
+//Files 
+r("फाइलबनाए","createNewFile");
+r("फाइल","java.io.File");
+r("लिखे","write");
+r("बंद","close");
+r("हैअगलीरेखा","hasNextLine");r("है","has");
+r("अगलीरेखा","nextLine");
+r("नष्ट","delete");
+
 //Special classes 
+r("दिनांकऔरसमयस्वरूपण","java.time.DateTimeFormatter");
+r("दिनांकऔरसमय","java.time.LocalDateTime");
+r("दिनांक","java.time.LocalDate");//date टाइम 
+r("समय","java.time.LocalTime");
 
 r("अंकगणितत्रुटि","ArithmeticException",$p); 
 r("फ़ाइलप्राप्तीमेत्रुति","FileNotFoundException",$p);
@@ -82,7 +115,7 @@ r("दोहरा","bollean",$p);
 r("","");
 r("","");*/
 //Control Statments
-//r("","");
+//r("मान","");
 r("अगर","if",$p);      
 r("या","else",$p);
 r("बदलो","switch",$p);r("बदले","switch",$p);      
@@ -116,8 +149,7 @@ function pair($symbol,$end){
         $nouse=strpos($s,$symbol,$rindex);
         echo "Unclosed ".$symbol." found at : ". $s[$nouse-5].$s[$nouse-4].$s[$nouse-3].$s[$nouse-2].$s[$nouse-1].$symbol.$s[$nouse+2].$s[$nouse+3].$s[$nouse+4]." \t";exit();}
 }          
-$s=str_replace("\"","escapeddoublem123",$s );
-$s=str_replace("\'","escapedsingleem123",$s );
+
 if($l=="java"){
     for (;;)
     {      
@@ -147,21 +179,18 @@ if($l=="java"){
 
 }  /**/
 if($l=="php"){
-r("कक्षा","class");r("समूह","class");       
-r("सार्वजनीक","publighc");r("सार्वजनिक","public");
+/*
 
-//r("","");
-r("अगर","if");       
-r("वरना","else");
-r("बदलो","switch");r("बदल","switch");       
-r("हैतो","case");r("हैतो","case");
-r("केलिए","for");r("के लिए","for");     
-r("जबतक ","while");r("जबतक ","while");
-r("करो","do"); 
+
+
+
+
+
+
+
+*/
 
 }
-//echo "<br>R:".$R."<br>index: ".$index."<br>s:".$s;escapedsingleem123
-$R=str_replace("escapeddoublem123","\"",$R );
-$R=str_replace("escapedsingleem123","\'",$R );
+//echo "<br>R:".$R."<br>index: ".$index."<br>s:".$s;
 echo $R;
 ?>
