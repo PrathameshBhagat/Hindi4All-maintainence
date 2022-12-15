@@ -34,7 +34,7 @@ curl_setopt_array($cur, array(
 $response = curl_exec($cur);
 curl_close($cur);
 $scr= $response;
-echo $scr;
+//echo $scr;
 //decoding to programming language complete
 
 
