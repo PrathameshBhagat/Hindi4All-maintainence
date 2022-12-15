@@ -16,7 +16,7 @@ curl_setopt_array($cur, array(
 
 
 
-  CURLOPT_URL => 'http://localhost/testedit/decode.php?comp=online&lang='.$lang,
+  CURLOPT_URL => 'https://crptrest.000webhostapp.com/decode.php?comp=online&lang='.$lang,
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => '',
   CURLOPT_MAXREDIRS => 10,
@@ -34,7 +34,7 @@ curl_setopt_array($cur, array(
 $response = curl_exec($cur);
 curl_close($cur);
 $scr= $response;
-//echo $scr;
+echo $scr;
 //decoding to programming language complete
 
 
