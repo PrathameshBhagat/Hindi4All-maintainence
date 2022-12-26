@@ -59,12 +59,23 @@ r("अभी","now");//date टाइम ..
 r("स्वरूप","format");
 r("रूप","ofPattern");
 
+//String and Math methords 
+r("मान","value");
+r("लंबाई","length");
+r("अभी","now");
+r("ज़्यादा","max");
+r("कम","min");
+r("मूल","sqrt");
+r("शुद्ध","abs");
+r("कोई","random");
+r("अनुक्रमांक","indexOf");
 //Files 
 r("फाइलबनाए","createNewFile");
+r("फाइललेखक","java.io.FileWriter");
 r("फाइल","java.io.File");
 r("लिखे","write");
 r("बंद","close");
-r("हैअगलीरेखा","hasNextLine");r("है","has");
+r("हैअगलीरेखा","hasNextLine");
 r("अगलीरेखा","nextLine");
 r("नष्ट","delete");
 
