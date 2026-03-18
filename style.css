@@ -7,7 +7,7 @@
             width: 95vw;display :inline-block;
             height: 70vh;resize: both;font-size: 20px;
           } 
-.container  .ace_editor  { 
+.ace-container  .ace_editor  { 
             width: 95vw;border: 5px solid #aaa;border-right: 2px;
             height: 70vh;resize: both;margin: 0;font-size: 20px;
         }
