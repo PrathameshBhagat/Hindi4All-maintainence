@@ -25,24 +25,6 @@
     <form accept-charset="utf-8">
     
         <p class="question text-light"> 
-    
-    		<span style="display: inline-block; margin-top :15px; margin-bottom :10px">
-    
-    			<span class="h2">
-    
-    				Write a program in hindi, we will run it 
-    
-    			</span> 
-    
-    			<br>
-    
-    			(current setup is similar to java) &nbsp;&nbsp;
-				(other languages comming soon)  &nbsp;&nbsp;
-				(resize editors from bottm right)
-    
-    		</span>
-			
-            <br>
 
             <INPUT TYPE="TEXT" class="form-control w-auto d-inline-block" name="uname" placeholder="UserName" value="userName">&nbsp;
 
@@ -55,7 +37,7 @@
             </select>
                 
             <input type="button" class="btn btn-primary" value="SAVE &#128190;" onclick="save()">
-            <input type="button"  class="btn btn-success" value="RUN  &#9654; " onclick="run()">
+            <input type="button" class="btn btn-success" value="RUN  &#9654; " onclick="run()">
                 
             <a href="https://prathameshbhagat.github.io/Documentation-Project/" target="_blank" rel="noopener noreferrer">
             	<input type="button" class="btn btn-success" value="Go to documentation &#x1F517; " >
@@ -82,27 +64,27 @@
 
 /* Note:- Press CTRL+ q if facing issuses in editing code here (twice to go back)*/
 /* Note:- One editor edits good other displays good hence the issue, we're working on it*/ 
-/* Note:- Feel free to edit code, run, submit it. :)  */ </textarea>
+/* Note:- Feel free to edit code, run, submit it. :)
                     </div></div></td> 
                     <td id="wr1" >
     
-    					<div class="editor-container  w-100">
+    					<div class="editor-container ">
     						<div class="ace-CONTAINER">
     							<textarea onblur="mitoace()" id="mirror" ></textarea>
                     </div>
                     </div>
 
-                    </td>
+                    </td> 			
+                    <td><div id="view" style="height:80vh; border:20px"></div> </td> 			
+                    <td>
+                    <div class="editor-container">
+                        <div id="view" style="height:90vh;width:50vw;font:150% monospace;margin: 0;border: 5px solid #aaa; color:#ff0;overflow: scroll;resize: both;" class=" ace_editor ace-cobalt ace_dark"></div> 
+                    </div> 
+                	</td>
                 </tr>
     
     
-                <tr>
-    				<td colspan="2">
-                    <div class="editor-container">
-                        <div id="view" style="height:80vh;font:150% monospace;color:#ff0;overflow: scroll;resize: both;" class=" ace_editor ace-cobalt ace_dark"></div> 
-                    </div> 
-                	</td>
-    			</tr>
+      
             </table>
     </form>
     <br><br><br><br><br><br>

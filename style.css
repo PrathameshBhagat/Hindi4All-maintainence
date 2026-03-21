@@ -4,12 +4,12 @@
   text-align: center;} 
  .CodeMirror {
           border: 5px solid #aaa;
-            width: 95vw;display :inline-block;
-            height: 70vh;resize: both;font-size: 20px;
+            width: 50vw;display :inline-block;
+            height: 90vh;resize: both;font-size: 20px;
           } 
 .ace-container  .ace_editor  { 
-            width: 95vw;border: 5px solid #aaa;border-right: 2px;
-            height: 70vh;resize: both;margin: 0;font-size: 20px;
+            width: 50vw;border: 5px solid #aaa; 
+            height: 90vh;resize: both;margin: 0;font-size: 20px;
         }
 #N1,#N2{display:none;}
 #N1.show,#N2.show{
