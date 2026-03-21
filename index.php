@@ -23,47 +23,33 @@
     <div id="N1" align="left"></div><div id="N2" style="left:10px" ></div>
 
     <form accept-charset="utf-8">
-    
-        <p class="question text-light"> 
-    
-    		<span style="display: inline-block; margin-top :15px; margin-bottom :10px">
-    
-    			<span class="h2">
-    
-    				Write a program in hindi, we will run it 
-    
-    			</span> 
-    
-    			<br>
-    
-    			(current setup is similar to java) &nbsp;&nbsp;
-				(other languages comming soon)  &nbsp;&nbsp;
-				(resize editors from bottm right)
-    
-    		</span>
+    <table class="question text-light w-100"> 
+
+        <tr> <td>
+
+    		<span style="display: inline-block; margin:15px; margin-bottom :10px">
+    			<span class="h1"> Hindi4All </span>
+                <span class="h5">Program in Hindi! </span>
+            </span>
 			
             <br>
 
-            <INPUT TYPE="TEXT" class="form-control w-auto d-inline-block" name="uname" placeholder="UserName" value="userName">&nbsp;
+            </td>
+            <td>
+            
+            <INPUT TYPE="TEXT" class="form-control w-auto d-inline-block" name="uname" placeholder="UserName" value="User">&nbsp;
 
         	<select class="form-select w-auto d-inline-block" name="lang">
-                <option value="java">Hindi/Java</option>
-                <option disabled value="python">PYTHON</option>
-                <option  disabled value="php">PHP</option>
-                <option value="javascript" disabled >JAVASCRIPT</option>
-                <option  disabled  value="c">C</option>
+                <option value="java">Hindi/Java</option><option disabled value="python">PYTHON</option><option  disabled value="php">PHP</option>
+                <option value="javascript" disabled >JAVASCRIPT</option><option  disabled  value="c">C</option>
             </select>
                 
             <input type="button" class="btn btn-primary" value="SAVE &#128190;" onclick="save()">
-            <input type="button"  class="btn btn-success" value="RUN  &#9654; " onclick="run()">
+            <button type="button" class="btn btn-success" data-toggle="tooltip" data-placement="top" onclick="run()" title="please save before running">RUN  &#9654;</button>
                 
             <a href="https://prathameshbhagat.github.io/Documentation-Project/" target="_blank" rel="noopener noreferrer">
-            	<input type="button" class="btn btn-success" value="Go to documentation &#x1F517; " >
-            </a>
-		</p>
-           
-        
-    		<span style="display:inline-block; margin:5px"></SPAN>
+            	<input type="button" class="btn btn-success" value="Go to Docs 🕮 " >
+            </a></td></tr>
 
         <table>
                 <tr> 
