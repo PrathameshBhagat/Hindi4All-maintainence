@@ -18,17 +18,25 @@
     <div id="N1" align="left"></div><div id="N2" style="left:10px" ></div>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3506596207312408" crossorigin="anonymous"></script>
     <form accept-charset="utf-8">
-        <p class="question">Write a program in hindi we will get it converted into java/python/c++/js/php code in<br>
-                <INPUT TYPE="TEXT" class="form-control w-auto d-inline-block" name="uname" placeholder="UserName" >&nbsp
-                <select class="form-select w-auto d-inline-block" name="lang"><option value="java">JAVA</option><option value="python">PYTHON</option><option value="php">PHP</option><option value="javascript">JAVASCRIPT</option><option value="c">C</option></select>
-                <input type="button" class="btn btn-primary" value="SAVE &#128190;" onclick="save()">
-                <input type="button" class="btn btn-success" value="RUN &#9654;" onclick="run()">
+      <table class="question w-100"> 
+          <tr> 
+            <td style="padding:10px">
+              <span class="h1"> Hindi4All </span>
+              <span class="h5"> Program in Hindi! </span>
+            </td>
+            <td>
 
-                <a href="https://prathameshbhagat.github.io/Documentation-Project/" target="_blank" rel="noopener noreferrer">
-            	    <input type="button" class="btn btn-success" value="Go to documentation &#x1F517; " >
-                </a>
-            </p>
-            
+              <input type="hidden" class="form-control w-auto d-inline-block" name="uname" placeholder="UserName" >&nbsp
+              <select class="form-select w-auto d-inline-block" name="lang"><option value="java">JAVA</option><option value="python">PYTHON</option><option value="php">PHP</option><option value="javascript">JAVASCRIPT</option><option value="c">C</option></select>        
+              <input type="button" class="btn btn-primary" value="SAVE &#128190;" onclick="save()">
+              <button type="button" class="btn btn-success" data-toggle="tooltip" data-placement="top" onclick="run()" title="Please save before running...">RUN  &#9654;</button>
+                  
+              <a href="https://prathameshbhagat.github.io/Documentation-Project/" target="_blank" rel="noopener noreferrer">
+                <input type="button" class="btn btn-success" value="Go to Docs 🕮 " >
+              </a>
+          </td>
+        </tr>      
+      </table>
 
         <table>
                 <tr > 
