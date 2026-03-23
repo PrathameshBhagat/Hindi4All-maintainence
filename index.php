@@ -14,7 +14,7 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3506596207312408" crossorigin="anonymous"></script>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   </head>
-  <body>
+  <body class="bg-dark text-light" >
     <div id="N1" align="left"></div><div id="N2" style="left:10px" ></div>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3506596207312408" crossorigin="anonymous"></script>
     <form accept-charset="utf-8">
@@ -33,11 +33,18 @@
         <table>
                 <tr > 
                     <td id="wr"><div class="editor-container"><div class=ace-container><textarea onblur="acetomi();" id="editor">
-    public class Main{
-             public static void main (String []args){
-             System.out.println("This site can have ads form online placement courses,B.E.,Btech and other colleges,companies seeking low cost programmers ,other Youtube channels,etc ");
-             System.out.println("Please apporove it as soon as possible so that the original site sample code,data and other  files can be added");
-    }}
+
+    कक्षा मुख्य {
+        सार्वजनिक स्थिर रिक्त जरूरी( डोर [] क){ 
+            
+          	/* This  line will print "नमस्ते ! Hello World !" */
+            तंत्र.बाहर.प्रिंट( " नमस्ते ! Hello World !" );    
+            
+        }
+    }   
+/* Note:- Press CTRL+ q if facing issuses in editing code here (twice to go back)*/
+/* Note:- One editor edits good other displays good hence the issue, we're working on it*/ 
+/* Note:- Feel free to edit code, run, submit it. :)  */ 
                     </textarea>
                     </div></div></td> 
                     <td id="wr1" ><div class="editor-container"><div class=ace-container><textarea onblur="mitoace()" id="mirror"></textarea></div></div></td>
