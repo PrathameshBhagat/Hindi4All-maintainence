@@ -1,8 +1,13 @@
-on: push
 name: 🚀 Deploy website on push
+
+on:
+  push:
+    branches:
+      - main
+
 jobs:
   web-deploy:
-    name: 🎉 Deploy
+    name: 🎉 Deploy on push to main
     runs-on: ubuntu-latest
     steps:
     - name: 🚚 Get latest code
@@ -11,7 +16,7 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.3.2
       with:
-        server: files.000webhost.com
-        username: crptrest
-        password: ${{ secrets.PASS }}
-        server-dir : /public_html/jokes/
+        server: ${{ vars.FTP_SERVER_URL }} 
+        username: ${{ vars.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        server-dir : /htdocs/
