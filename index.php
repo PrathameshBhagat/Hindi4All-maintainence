@@ -44,7 +44,7 @@
 			
             <br>
 
-            <INPUT TYPE="TEXT" class="form-control w-auto d-inline-block" name="uname" placeholder="UserName" value="userName">&nbsp;
+            <INPUT TYPE="hidden" class="form-control w-auto d-inline-block" name="uname" placeholder="UserName" value="userName">&nbsp;
 
         	<select class="form-select w-auto d-inline-block" name="lang">
                 <option value="java">Hindi/Java</option>

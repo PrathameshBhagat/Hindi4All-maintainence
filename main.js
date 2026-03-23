@@ -8,6 +8,17 @@ editor.setOptions({
         enableLiveAutocompletion: true
 });
 window.onload=function(){
+    
+    // Retrive UUID from localstorage or create UUID for this user / session 
+    if (localStorage.clickcount) {
+        //localStorage.clickcount =   crypto.randomUUID();
+    } else {
+        localStorage.clickcount = crypto.randomUUID();
+    }
+
+    // Now set this UUID as our username ("uname ")
+    document.getElementsByName("uname")[0].value= localStorage.clickcount;
+
             document.getElementById("wr1").style.display="none";
             document.getElementById("wr").style.display="block";}
 var mirror = CodeMirror.fromTextArea(document.getElementById("mirror"), {
