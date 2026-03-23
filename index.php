@@ -12,22 +12,27 @@
 <script src="simplemode.js" ></script>
 <link rel="stylesheet" href="style.css" />
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3506596207312408" crossorigin="anonymous"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   </head>
   <body>
     <div id="N1" align="left"></div><div id="N2" style="left:10px" ></div>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3506596207312408" crossorigin="anonymous"></script>
     <form accept-charset="utf-8">
         <p class="question">Write a program in hindi we will get it converted into java/python/c++/js/php code in<br>
-                <INPUT TYPE="TEXT" name="uname" placeholder="UserName" >&nbsp
-                <select name="lang"><option value="java">JAVA</option><option value="python">PYTHON</option><option value="php">PHP</option><option value="javascript">JAVASCRIPT</option><option value="c">C</option></select>
-                 <input type="button" value="SAVE" onclick="save()">
-                <input type="button" value="RUN" onclick="run()">
+                <INPUT TYPE="TEXT" class="form-control w-auto d-inline-block" name="uname" placeholder="UserName" >&nbsp
+                <select class="form-select w-auto d-inline-block" name="lang"><option value="java">JAVA</option><option value="python">PYTHON</option><option value="php">PHP</option><option value="javascript">JAVASCRIPT</option><option value="c">C</option></select>
+                <input type="button" class="btn btn-primary" value="SAVE &#128190;" onclick="save()">
+                <input type="button" class="btn btn-success" value="RUN &#9654;" onclick="run()">
+
+                <a href="https://prathameshbhagat.github.io/Documentation-Project/" target="_blank" rel="noopener noreferrer">
+            	    <input type="button" class="btn btn-success" value="Go to documentation &#x1F517; " >
+                </a>
             </p>
             
 
         <table>
                 <tr > 
-                    <td id="wr"><div class="editor-container"><div class=container><textarea onblur="acetomi();" id="editor">
+                    <td id="wr"><div class="editor-container"><div class=ace-container><textarea onblur="acetomi();" id="editor">
     public class Main{
              public static void main (String []args){
              System.out.println("This site can have ads form online placement courses,B.E.,Btech and other colleges,companies seeking low cost programmers ,other Youtube channels,etc ");
@@ -35,7 +40,7 @@
     }}
                     </textarea>
                     </div></div></td> 
-                    <td id="wr1" ><div class="editor-container"><div class=container><textarea onblur="mitoace()" id="mirror"></textarea></div></div></td>
+                    <td id="wr1" ><div class="editor-container"><div class=ace-container><textarea onblur="mitoace()" id="mirror"></textarea></div></div></td>
                 </tr>
                 <tr><td colspan="2">
            <div class="editor-container"><div id="view" style="height:100vh;font:150% monospace;color:#ff0;overflow: scroll;resize: both;" class=" ace_editor ace-cobalt ace_dark"></div> </div> 
