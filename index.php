@@ -48,9 +48,8 @@
                     </textarea>
                     </div></div></td> 
                     <td id="wr1" ><div class="editor-container"><div class=ace-container><textarea onblur="mitoace()" id="mirror"></textarea></div></div></td>
-                </tr>
-                <tr><td colspan="2">
-           <div class="editor-container"><div id="view" style="height:100vh;font:150% monospace;color:#ff0;overflow: scroll;resize: both;" class=" ace_editor ace-cobalt ace_dark"></div> </div> 
+                    <td colspan="2">
+                      <div class="editor-container"><div id="view" style="height:80vh;width:50vw;font:150% monospace;color:#ff0;overflow: scroll;resize: both;" class=" ace_editor ace-cobalt ace_dark"></div> </div> 
                 </td></tr>
             </table>
     </form>
