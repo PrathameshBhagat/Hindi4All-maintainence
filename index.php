@@ -38,9 +38,12 @@
         </tr>      
       </table>
 
-        <table>
-                <tr > 
-                    <td id="wr"><div class="editor-container"><div class=ace-container><textarea onblur="acetomi();" id="editor">
+          <div style="display:flex">
+            <div>
+              <div id="wr">
+                <div class="editor-container">
+                  <div class=ace-container>
+                    <textarea onblur="acetomi();" id="editor">
 
     कक्षा मुख्य {
         सार्वजनिक स्थिर रिक्त जरूरी( डोर [] क){ 
@@ -54,14 +57,30 @@
 /* Note:- One editor edits good other displays good hence the issue, we're working on it*/ 
 /* Note:- Feel free to edit code, run, submit it. :)  */ 
                     </textarea>
-                    </div></div></td> 
-                    <td id="wr1" ><div class="editor-container"><div class=ace-container><textarea onblur="mitoace()" id="mirror"></textarea></div></div></td>
-                    <td colspan="2">
-                      <div class="editor-container"><div id="view" style="height:80vh;width:50vw;font:150% monospace;color:#ff0;overflow: scroll;resize: both;border: 5px solid #aaa;" class=" ace_editor ace-cobalt ace_dark"></div> </div> 
-                </td></tr>
-            </table>
+                  </div>
+                </div>
+              </div>
+
+              <div id="wr1" > 
+                <div class="editor-container">
+                  <div class=ace-container>
+                    <textarea onblur="mitoace()" id="mirror">
+
+                    </textarea>
+                  </div>
+                </div>
+              </div>
+            </div> 
+            <div>
+              <div class="editor-container">
+                <div id="view" style="height:80vh;width:50vw;font:150% monospace;color:#ff0;overflow: scroll;resize: both;border: 5px solid #aaa;" class=" ace_editor ace-cobalt ace_dark">
+                  
+                </div> 
+              </div> 
+            </div>
+          </div>
     </form>
-    <br><br><br><br><br><br>
+    
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.12.3/ace.js" integrity="sha512-yARx+3W/tyZPXyRfZ4DLRdj0rXF2yjH2D6bKpPslrl1c62Q6ZC808L++ft9jkzIN9vmLtQCFsYNrzoOE/Im2Dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.12.5/ext-language_tools.min.js" ></script>
