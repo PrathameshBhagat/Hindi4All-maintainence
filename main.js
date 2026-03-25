@@ -125,3 +125,17 @@ function noti(data,n) {
   // After sometime, remove the show class from DIV
   setTimeout(function(){ x.className = x.className.replace("show", "");x.textContent="";x.padding="0px;"; }, 5000);
 }
+
+function toggleEditorFlexDirection(){
+
+    var x = document.getElementById("editor-container-all");
+
+    if(x.classList.contains('d-flex'))
+
+        x.className = x.className.replace('d-flex', "");
+
+    else 
+
+        x.className = 'd-flex';
+
+}

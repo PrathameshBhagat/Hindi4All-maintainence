@@ -29,6 +29,7 @@
               <input type="hidden" class="form-control w-auto d-inline-block" name="uname" placeholder="UserName" >&nbsp
               <select class="form-select w-auto d-inline-block" name="lang"><option value="java">JAVA</option><option value="python">PYTHON</option><option value="php">PHP</option><option value="javascript">JAVASCRIPT</option><option value="c">C</option></select>        
               <input type="button" class="btn btn-primary" value="SAVE &#128190;" onclick="save()">
+              <input type="button" class="btn btn-primary" value="&#9776;" onclick="toggleEditorFlexDirection()">
               <button type="button" class="btn btn-success" data-toggle="tooltip" data-placement="top" onclick="run()" title="Please save before running...">RUN  &#9654;</button>
                   
               <a href="https://prathameshbhagat.github.io/Documentation-Project/" target="_blank" rel="noopener noreferrer">
@@ -38,7 +39,7 @@
         </tr>      
       </table>
 
-          <div style="display:flex">
+          <div id="editor-container-all" class="d-flex">
             <div>
               <div id="wr">
                 <div class="editor-container">
