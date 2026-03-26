@@ -130,12 +130,20 @@ function toggleEditorFlexDirection(){
 
     var x = document.getElementById("editor-container-all");
 
-    if(x.classList.contains('d-flex'))
+    if(x.classList.contains('d-flex')){
 
         x.className = x.className.replace('d-flex', "");
+        document.getElementsByClassName("ace_editor")[0].style.width="98vw";
+        document.getElementsByClassName("ace_editor")[1].style.width="98vw";
+    }
 
-    else 
+    else {
 
-        x.className = 'd-flex';
+        x.className = 'd-flex'; 
+
+        document.getElementsByClassName("ace_editor")[0].style.width="50vw";
+        document.getElementsByClassName("ace_editor")[1].style.width="50vw";
+    }
+
 
 }
