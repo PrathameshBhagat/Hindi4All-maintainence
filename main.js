@@ -135,6 +135,7 @@ function toggleEditorFlexDirection(){
         x.className = x.className.replace('d-flex', "");
         document.getElementsByClassName("ace_editor")[0].style.width="98vw";
         document.getElementsByClassName("ace_editor")[1].style.width="98vw";
+        document.querySelector(".CodeMirror").style.width="98vw";
     }
 
     else {
@@ -143,6 +144,7 @@ function toggleEditorFlexDirection(){
 
         document.getElementsByClassName("ace_editor")[0].style.width="50vw";
         document.getElementsByClassName("ace_editor")[1].style.width="50vw";
+        document.querySelector(".CodeMirror").style.width="50vw";
     }
 
 
