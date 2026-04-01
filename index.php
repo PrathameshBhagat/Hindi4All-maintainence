@@ -80,5 +80,6 @@
     <script src="snippets-javaa.js"></script>
     <script src="mode-javaa.js"></script> 
     <script src="main.js"></script> <br >
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
       </body>
 </html>
