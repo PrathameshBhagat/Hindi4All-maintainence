@@ -16,7 +16,7 @@ curl_setopt_array($cur, array(
 
 
 
-  CURLOPT_URL => 'https://crptrest.000webhostapp.com/decode.php?comp=online&lang='.$lang,
+  CURLOPT_URL => getenv('SERVER_URL').'decode.php?comp=online&lang='.$lang,
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => '',
   CURLOPT_MAXREDIRS => 10,
