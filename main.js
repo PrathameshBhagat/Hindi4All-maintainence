@@ -126,9 +126,34 @@ function noti(data,n) {
   setTimeout(function(){ x.className = x.className.replace("show", "");x.textContent="";x.padding="0px;"; }, 5000);
 }
 
-var sidebar = document.getElementById("sidebar-list");
-sidebar.innerHTML = sidebar.innerHTML  ;
-var li = document.createElement("li");
-li.innerHTML ="<a href= \'#\'  class=\'nav-link active\' >dfssdf</a>";
-li.onclick = ()=>{navigator.clipboard.writeText("Kaisa hai bhai......").then( ()=> alert("copied!"));}
-sidebar.appendChild(li);
+{   // Code block for side bar
+    var sidebar = document.getElementById("sidebar-list");
+
+    // Snippets JSON object ..... fetch it from some where else ....
+    var snippets = [{
+            "name":"if-else",
+            "snippet":"if-else-snippet",
+            "snippet-full":"if-else-snippet-full-body"
+        },{
+            "name":"while",
+            "snippet":"if-while-snippet",
+            "snippet-full":"if-while-snippet-full-body"
+        }
+      ]
+
+    // Loop through all snoppets and create objects as required
+    for(let obj of snippets ){
+
+        // Create objects 
+        let li = document.createElement("li");
+        
+        // Add functionality to it 
+        li.innerHTML ="<a href=\'#\'  class=\'nav-link text-light\' >" + obj.name + "</a>";
+        li.onclick = ()=>{navigator.clipboard.writeText(obj.snippet).then( ()=> alert("copied ! " + obj.snippet));}
+        li.onmouseenter = () => {li.innerHTML ="<a href=\'#\'  class=\'nav-link active\' >" + obj.name + "</a>";}
+        li.onmouseleave = () => {li.innerHTML ="<a href=\'#\'  class=\'nav-link text-light \' >" + obj.name + "</a>";}
+        
+        // Actually append the item to the required place...
+        sidebar.appendChild(li);
+    } 
+}
