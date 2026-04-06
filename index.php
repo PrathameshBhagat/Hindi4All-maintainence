@@ -17,10 +17,6 @@
   </head>
   <body class="bg-dark text-light" >
 
-  <button class="btn btn-primary mb-3"  type="button" data-bs-toggle="offcanvas"  data-bs-target="#sidebar" aria-expanded="true" aria-controls="sidebar">
-  Snippets
-</button>
- 
   <div id="sidebar" class=" offcanvas offcanvas-start d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="z-index: 10000; position : fixed; height:auto; top:0;left:0; overflow-y: auto; width: 280px;">
     
     
@@ -67,6 +63,7 @@ x
               <select class="form-select w-auto d-inline-block" name="lang"><option value="java">JAVA</option><option value="python">PYTHON</option><option value="php">PHP</option><option value="javascript">JAVASCRIPT</option><option value="c">C</option></select>        
               <input type="button" class="btn btn-primary" value="SAVE &#128190;" onclick="save()">
               <button type="button" class="btn btn-success" data-toggle="tooltip" data-placement="top" onclick="run()" title="Please save before running...">RUN  &#9654;</button>
+              <input type="button" class="btn btn-primary" value="Snippets" data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-expanded="true" aria-controls="sidebar" />
                   
               <a href="https://prathameshbhagat.github.io/Documentation-Project/" target="_blank" rel="noopener noreferrer">
                 <input type="button" class="btn btn-success" value="Go to Docs 🕮 " >
