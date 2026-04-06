@@ -128,7 +128,7 @@ function noti(data,n) {
 
 var sidebar = document.getElementById("sidebar-list");
 sidebar.innerHTML = sidebar.innerHTML  ;
-var a = document.createElement("li");
-a.innerHTML ="<a href= \'#\'  class=\'nav-link active\' >dfssdf</a>";
- 
-sidebar.appendChild(a);
+var li = document.createElement("li");
+li.innerHTML ="<a href= \'#\'  class=\'nav-link active\' >dfssdf</a>";
+li.onclick = ()=>{navigator.clipboard.writeText("Kaisa hai bhai......").then( ()=> alert("copied!"));}
+sidebar.appendChild(li);
