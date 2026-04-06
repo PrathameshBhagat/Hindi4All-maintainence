@@ -132,11 +132,19 @@ function noti(data,n) {
     // Snippets JSON object ..... fetch it from some where else ....
     var snippets = [{
             "name":"if-else",
-            "snippet":"if-else-snippet",
+            "snippet":"अंक time = 21 ; \n अगर(time < 10 ) { \n तंत्र.बाहर.प्रिंट(\"Good morning.\"); \n }  \n या अगर(time < 20 ){ \n तंत्र.बाहर.प्रिंट(\"Good day.\"); \n } \n या { \n तंत्र.बाहर.प्रिंट(\"Good evening.\"); \n }  \n // Outputs \"Good evening.\"",
             "snippet-full":"if-else-snippet-full-body"
         },{
+            "name":"switch",
+            "snippet":"अंक  day = 4;\n बदले  (day) {\n   यदि 6:\n     तंत्र.बाहर.प्रिंट(\"Today is Saturday\");\n     break;\n   यदि 7:\n     तंत्र.बाहर.प्रिंट(\"Today is Sunday\");\n     break;\n   आम:\n     तंत्र.बाहर.प्रिंट(\"Looking forward to the Weekend\");\n }\n // Outputs \"Looking forward to the Weekend\" ",
+            "snippet-full":"if-while-snippet-full-body"
+        },{
+            "name":"for loop",
+            "snippet":"केलिए(अंक i = 0; i < 5; i++) {\nतंत्र.बाहर.प्रिंट(i);\n}",
+            "snippet-full":"if-while-snippet-full-body"
+        },{
             "name":"while",
-            "snippet":"if-while-snippet",
+            "snippet":"अंक i = 0;/n जब-तक(i < 5){/n     तंत्र.बाहर.प्रिंट(i);  /n      i++;/n }",
             "snippet-full":"if-while-snippet-full-body"
         }
       ]
@@ -149,7 +157,7 @@ function noti(data,n) {
         
         // Add functionality to it 
         li.innerHTML ="<a href=\'#\'  class=\'nav-link text-light\' >" + obj.name + "</a>";
-        li.onclick = ()=>{navigator.clipboard.writeText(obj.snippet).then( ()=> alert("copied ! " + obj.snippet));}
+        li.onclick = ()=>{navigator.clipboard.writeText(obj.snippet).then( ()=> alert("Copied :- " + obj.name + " ! "));}
         li.onmouseenter = () => {li.innerHTML ="<a href=\'#\'  class=\'nav-link active\' >" + obj.name + "</a>";}
         li.onmouseleave = () => {li.innerHTML ="<a href=\'#\'  class=\'nav-link text-light \' >" + obj.name + "</a>";}
         
