@@ -16,17 +16,20 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
   </head>
   <body class="bg-dark text-light" >
- 
 
-    <button class="btn btn-primary mb-3"  style="z-index: 10000; position : fixed; height:100vh; top:0;right:0;" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar" aria-expanded="true" aria-controls="sidebar">
-  Toggle Sidebar
+  <button class="btn btn-primary mb-3"  type="button" data-bs-toggle="offcanvas"  data-bs-target="#sidebar" aria-expanded="true" aria-controls="sidebar">
+  Snippets
 </button>
  
-  <div id="sidebar" class=" collapse show d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="z-index: 10000; position : fixed; height:100vh; top:0;left:0; overflow-y: auto; width: 280px;">
-    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-      <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
+  <div id="sidebar" class=" offcanvas offcanvas-start d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="z-index: 10000; position : fixed; height:auto; top:0;left:0; overflow-y: auto; width: 280px;">
+    
+    
+<div class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+      <button class="btn d-inline btn-primary mb-3" type="button" data-bs-toggle="offcanvas"  data-bs-target="#sidebar" aria-expanded="true" aria-controls="sidebar">
+x
+</button><svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
       <span class="fs-4">Snippets</span>
-    </a>
+</div>
  
     <hr>
     <ul id="sidebar-list" class="nav nav-pills flex-column mb-auto">
