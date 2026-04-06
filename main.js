@@ -125,3 +125,10 @@ function noti(data,n) {
   // After sometime, remove the show class from DIV
   setTimeout(function(){ x.className = x.className.replace("show", "");x.textContent="";x.padding="0px;"; }, 5000);
 }
+
+var sidebar = document.getElementById("sidebar-list");
+sidebar.innerHTML = sidebar.innerHTML  ;
+var a = document.createElement("li");
+a.innerHTML ="<a href= \'#\'  class=\'nav-link active\' >dfssdf</a>";
+ 
+sidebar.appendChild(a);
