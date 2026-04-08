@@ -126,28 +126,14 @@ function noti(data,n) {
   setTimeout(function(){ x.className = x.className.replace("show", "");x.textContent="";x.padding="0px;"; }, 5000);
 }
 
-{   // Code block for side bar
-    var sidebar = document.getElementById("sidebar-list");
+fetch("http://localhost/snippets.json")
+.then((response)=> response.json())
+.then((response)=>loadSidebarSnippets( response));
 
-    // Snippets JSON object ..... fetch it from some where else ....
-    var snippets = [{
-            "name":"if-else",
-            "snippet":"अंक time = 21 ; \n अगर(time < 10 ) { \n तंत्र.बाहर.प्रिंट(\"Good morning.\"); \n }  \n या अगर(time < 20 ){ \n तंत्र.बाहर.प्रिंट(\"Good day.\"); \n } \n या { \n तंत्र.बाहर.प्रिंट(\"Good evening.\"); \n }  \n // Outputs \"Good evening.\"",
-            "snippet-full":"if-else-snippet-full-body"
-        },{
-            "name":"switch",
-            "snippet":"अंक  day = 4;\n बदले  (day) {\n   यदि 6:\n     तंत्र.बाहर.प्रिंट(\"Today is Saturday\");\n     break;\n   यदि 7:\n     तंत्र.बाहर.प्रिंट(\"Today is Sunday\");\n     break;\n   आम:\n     तंत्र.बाहर.प्रिंट(\"Looking forward to the Weekend\");\n }\n // Outputs \"Looking forward to the Weekend\" ",
-            "snippet-full":"if-while-snippet-full-body"
-        },{
-            "name":"for loop",
-            "snippet":"केलिए(अंक i = 0; i < 5; i++) {\nतंत्र.बाहर.प्रिंट(i);\n}",
-            "snippet-full":"if-while-snippet-full-body"
-        },{
-            "name":"while",
-            "snippet":"अंक i = 0;/n जब-तक(i < 5){/n     तंत्र.बाहर.प्रिंट(i);  /n      i++;/n }",
-            "snippet-full":"if-while-snippet-full-body"
-        }
-      ]
+function loadSidebarSnippets( snippets){
+
+    // Code block for side bar
+    var sidebar = document.getElementById("sidebar-list");
 
     // Loop through all snoppets and create objects as required
     for(let obj of snippets ){
