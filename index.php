@@ -27,6 +27,20 @@
     </div>
   </div>
 </div>
+
+<div class="position-fixed start-0 end-0 p-3" style="z-index: 1000000;">
+  <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true"  data-bs-delay="3000"  data-bs-delay="3000" >
+    <div class="toast-header">
+      <svg aria-hidden="true" class="bd-placeholder-img rounded me-2" height="20" preserveAspectRatio="xMidYMid slice" width="20" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="#007aff"></rect></svg>
+      <strong class="me-auto">Notification
+      </strong>
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body text-dark">
+    Hello, world! This is a toast message.
+    </div>
+  </div>
+</div>
     <div id="N1" align="left"></div><div id="N2" style="left:10px" ></div>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3506596207312408" crossorigin="anonymous"></script>
     <form accept-charset="utf-8">
