@@ -28,11 +28,11 @@ function bodych(){
         if(document.getElementById("wr1").style.display=="block")
             {document.getElementById("wr1").blur();
             document.getElementById("wr1").style.display="none";
-            document.getElementById("wr").style.display="block";}
+            document.getElementById("wr").style.display="block";mitoace();}
         else if(document.getElementById("wr").style.display=="block")
             {document.getElementById("wr").blur();
             document.getElementById("wr").style.display="none";
-            document.getElementById("wr1").style.display="block";}   
+            document.getElementById("wr1").style.display="block";acetomi();}   
         };
 
 editor.commands.addCommand({
