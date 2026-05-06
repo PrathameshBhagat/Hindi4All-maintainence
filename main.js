@@ -127,9 +127,13 @@ function noti(data,n) {
 }
 
 function toggleEditorFlexDirection(){
+    // Function to toggle editors from left-right to top-bottom
 
+    // Parent container
     var x = document.getElementById("editor-container-all");
 
+    // If the container is already flex toggle it,
+    // else add flex and set width accordingly.
     if(x.classList.contains('d-flex')){
 
         x.className = x.className.replace('d-flex', "");
