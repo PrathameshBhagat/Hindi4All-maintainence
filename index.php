@@ -28,6 +28,7 @@
 
               <input type="hidden" class="form-control w-auto d-inline-block" name="uname" placeholder="UserName" >&nbsp
               <select class="form-select w-auto d-inline-block" name="lang"><option value="java">JAVA</option><option value="python">PYTHON</option><option value="php">PHP</option><option value="javascript">JAVASCRIPT</option><option value="c">C</option></select>        
+              <input type="button" class="btn btn-primary" value="Toggle Editor" onclick="bodych()">
               <input type="button" class="btn btn-primary" value="SAVE &#128190;" onclick="save()">
               <button type="button" class="btn btn-success" data-toggle="tooltip" data-placement="top" onclick="run()" title="Please save before running...">RUN  &#9654;</button>
                   
