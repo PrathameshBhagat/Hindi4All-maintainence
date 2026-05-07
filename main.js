@@ -132,24 +132,26 @@ function toggleEditorFlexDirection(){
     // Parent container
     var x = document.getElementById("editor-container-all");
 
-    // If the container is already flex toggle it,
-    // else add flex and set width accordingly.
+    var new_width ;
+
+    // If the container is already flex then remove it,
+    // else add flex and then set width accordingly.
     if(x.classList.contains('d-flex')){
 
         x.className = x.className.replace('d-flex', "");
-        document.getElementsByClassName("ace_editor")[0].style.width="98vw";
-        document.getElementsByClassName("ace_editor")[1].style.width="98vw";
-        document.querySelector(".CodeMirror").style.width="98vw";
-    }
+        new_width = "99vw";
 
-    else {
+    } else {
 
         x.className = 'd-flex'; 
+        new_width = "49vw";
 
-        document.getElementsByClassName("ace_editor")[0].style.width="50vw";
-        document.getElementsByClassName("ace_editor")[1].style.width="50vw";
-        document.querySelector(".CodeMirror").style.width="50vw";
     }
+
+    // Set the widths
+    document.getElementsByClassName("ace_editor")[0].style.width = new_width;
+    document.getElementsByClassName("ace_editor")[1].style.width = new_width;
+    document.querySelector(".CodeMirror").style.width = new_width;
 
 
 }
