@@ -74,7 +74,7 @@ if (isset($r->error))   echo $r->error;
 */
 //CODE FOR MY API 
 
-$url = "https://try.w3schools.com/try_java.php?";
+$url = "https://aaaa-80u6.onrender.com/run";
 
 $curl = curl_init($url);
 curl_setopt($curl, CURLOPT_URL, $url);
