@@ -22,16 +22,13 @@ $redis = new Predis\Client([
     ]
     );
 
+$temp = json_decode(file_get_contents('php://input'), true);
+
 $obj = [ 
     "ID" => uniqid(), 
-    "code" => 'public class HelloWorld {
-        public static void main(String[] args) {
-            System.out.println("Hello, World!");
-        }
-    }', ];
+    "code" => $temp['code']];
 
-
-redis->lPush('jobs', json_encode($obj)); 
+$redis->lPush('jobs', json_encode($obj)); 
 
 echo json_encode([ "jobId" => $obj['ID']]);
 
@@ -39,7 +36,7 @@ $op = $redis->lRange('jobs',  0, -1 );
 
 foreach( $op as $jb ){
     
-    echo $jb."<br>";
+    echo "</br>".$jb."</br>";
 
 }
 

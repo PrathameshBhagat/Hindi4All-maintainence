@@ -16,7 +16,7 @@ curl_setopt_array($cur, array(
 
 
 
-  CURLOPT_URL => 'https://crptrest.000webhostapp.com/decode.php?comp=online&lang='.$lang,
+  CURLOPT_URL => 'http://localhost/decode.php?comp=online&lang='.$lang,
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => '',
   CURLOPT_MAXREDIRS => 10,
@@ -74,7 +74,7 @@ if (isset($r->error))   echo $r->error;
 */
 //CODE FOR MY API 
 
-$url = "https://aaaa-80u6.onrender.com/run";
+$url = "http://localhost/redis.php";
 
 $curl = curl_init($url);
 curl_setopt($curl, CURLOPT_URL, $url);
@@ -82,11 +82,11 @@ curl_setopt($curl, CURLOPT_POST, true);
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 
 $headers = array(
-   "Content-Type: application/x-www-form-urlencoded",
+   "Content-Type: application/json"
 );
 curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
 
-$data = 'code='.$scr;
+$data = json_encode(['code' => $scr]);
 
 curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
 
