@@ -100,17 +100,17 @@ function run(){
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.onload = function () {
         console.log("Run: "+this.response);
-        var result=this.response.toString();
-        //remove extras from server
-        result=result.replace(/<style>/g,"<may>");
-        result=result.replace(/[\r\n]/g,"<br>");
-        result=result.replace(/(<[/]style>)/g,"</may>");       
-        result=result.replace(/<pre>|<[/]pre>/g,"");
-        //now remove the contents of style 
-        document.getElementById("view").innerHTML=result;console.log("Run: "+result);
-        //remove extras from server and a style tag
-        var remove=document.getElementsByTagName("may")[0];
-        remove.parentNode.removeChild(remove);     
+
+        console.log("Run: "+this.response);
+        var result=JSON.parse(this.response);
+
+        // Store Job Id in local storage for polling later
+        localStorage.currentJobID = result.jobId;
+
+        console.log("JOB ID recieved:" + localStorage.currentJobID );
+
+        poll(localStorage.currentJobID );
+  
         //notiyfy
         noti("COMPILED","N2");
     };console.log(a); 
@@ -124,4 +124,35 @@ function noti(data,n) {
   x.className = "show";
   // After sometime, remove the show class from DIV
   setTimeout(function(){ x.className = x.className.replace("show", "");x.textContent="";x.padding="0px;"; }, 5000);
+}
+
+function poll(jobId){
+    
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "result.php?jobId="+jobId, true);
+    xhr.onload = function () {
+
+        console.log(this.response);
+        
+        const response =  JSON.parse(this.response);
+
+        if(response.status === 'COMPLETED'){
+
+            document.getElementById("view").innerHTML= response.stdout;
+            //notiyfy
+            noti("COMPILED","N2");
+            return; 
+
+        } 
+        
+        if(response.status === 'FAILED') {
+            console.log( "Code failed to execute");
+            return; 
+        }
+
+        console.log('Job still processing');
+        setTimeout(() => poll(jobId), 500);
+
+    };
+    xhr.send();
 }
